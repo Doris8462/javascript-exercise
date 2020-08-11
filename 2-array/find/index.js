@@ -3,7 +3,7 @@ export default function find00OldPerson(collection) {
   const myDate = new Date();
   const thisYear = myDate.getFullYear();
   const result = collection.find(item => {
-    return item.age <= thisYear - 2000;
+    return item.age <= thisYear - 2000 && item.age >= thisYear - 2010;
   });
   return result.name;
 }
